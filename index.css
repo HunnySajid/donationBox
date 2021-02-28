@@ -5,7 +5,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: flex-start;
 	height: 100vh;
 	background-color: #62d39f;
 }
@@ -30,7 +30,7 @@ h1 {
 	font-size: 15vmin;
 	color: white;
 	text-align: center;
-    font-weight: 600;
+	font-weight: 600;
 }
 button {
 	max-width: 500px;
@@ -40,8 +40,15 @@ button {
 	border: none;
 	color: #3bce8a;
 	font-size: 5vmin;
-    cursor: pointer;
+	cursor: pointer;
 }
 button:focus {
-    outline: unset;
+	outline: unset;
+}
+
+.mt-5 {
+	margin-top: 5%;
+}
+.hide {
+	display: none;
 }

@@ -9,28 +9,12 @@
 <script src="confetti.js"></script>
 <body>
 <div class="root-container">
- <h1 id="heading">How much would you like to donate?</h1>
- <div class="input-container">
+ <h1 id="heading" class="mt-5">How much would you like to donate?</h1>
+ <div class="input-container mt-5">
     <input id="amount" type="text" oninput="onChange(this)" />
  </div>
- <button id="submit-btn" onclick="onSubmit()">Submit</button>
+ <button id="submit-btn" class="mt-5" onclick="onSubmit()">Submit</button>
 </div>
 </body>
-<script>
-   function onChange(e) {
-      e.value = e.value.replace(/[^\d.]/g, '')
-      e.value = parseFloat(e.value ? e.value : 0).toFixed(2);
-      e.value = `$${e.value}`;
-   }
-   function onSubmit(){
-      const submitBtn = document.getElementById("submit-btn");
-      const headingText = document.getElementById("heading");
-      submitBtn.innerText = "Submitting"
-      setTimeout(() => {
-         submitBtn.innerText = "Congratulations!";
-         headingText.innerText = "You have made a donation 🙏";
-         confetti.start(1000)
-      },2000)
-   }
-</script>
+<script src="main.js"></script>
 </html>
